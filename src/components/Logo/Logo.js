@@ -1,10 +1,13 @@
-import classes from "./Logo.module.css"
+import classes from "./Logo.module.css";
+import logo from "../../Picture/banana_pancake.svg";
 
-const Logo = () => {
+function Logo() {
     return (
         <div className={classes.Logo}>
-            Logo
+            <img src={logo} alt="Pancake logo" />
+            <span>Pancake</span>
         </div>
     );
 }
+
 export default Logo;

@@ -1,13 +1,13 @@
-import Layout from "./components/Layout/Layout"; 
-
+import Layout from "./components/Layout/Layout";
+import "./App.css"
 
 function App() {
   return (
     <div className="App">
-     <Layout>
-     Pizza Builder by my master Janasyl Duishenbaev
-     </Layout>
- </div>
+      <Layout>
+        Pizza Builder by master Janasyl<br />
+      </Layout>
+    </div>
   );
 }
 

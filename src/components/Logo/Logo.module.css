@@ -1,0 +1,9 @@
+  
+.Pancake {
+    display: flex;
+    align-items: center;
+  }
+  .Pancake img {
+    height: 30px;
+    margin-right: .5rem;
+  }
