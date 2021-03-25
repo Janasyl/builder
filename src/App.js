@@ -1,11 +1,12 @@
 import Layout from "./components/Layout/Layout";
-import "./App.css"
+import FastFoodBuilder from "./components/FFBuilder/FFBuilder";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        Pizza Builder by master Janasyl<br />
+        <FastFoodBuilder />
       </Layout>
     </div>
   );

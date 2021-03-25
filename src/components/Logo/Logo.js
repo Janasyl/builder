@@ -1,13 +1,13 @@
 import classes from "./Logo.module.css";
-import logo from "../../Picture/banana_pancake.svg";
+import logo from "../../images/fast-food.svg";
 
-function Logo() {
-    return (
-        <div className={classes.Logo}>
-            <img src={logo} alt="Pancake logo" />
-            <span>Pancake</span>
-        </div>
-    );
+const Logo = () => {
+  return (
+    <div className={classes.Logo}>
+      <img src={logo} alt="Logo of the fast food project" />
+      <div>Fast Food</div>
+    </div>
+  );
 }
 
 export default Logo;
