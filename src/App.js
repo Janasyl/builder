@@ -1,8 +1,9 @@
 import Layout from "./components/Layout/Layout";
-import FastFoodBuilder from "./components/FFBuilder/FFBuilder";
+import FastFoodBuilder from "./components/FastFoodBuilder/FastFoodBuilder";
+
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Layout>

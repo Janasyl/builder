@@ -1,17 +1,17 @@
-import FFIngredient from "../FFIngredient/FFIngredient";
-import classes from "./FFPreview.module.css";
+import FastFoodIngredient from "../FastFoodIngredient/FastFoodIngredient";
+import classes from "./FastFoodPreview.module.css";
 import ingredientsBackground from "../../../images/french-fries.svg";
 
-const FFPreview = ({ ingredients }) => {
+const FastFoodPreview = ({ ingredients }) => {
   const result = [];
   for (const ingredient in ingredients) {
     for (let i = 0; i < ingredients[ingredient]; i++) {
-      result.push(<FFIngredient type={ingredient} />)
+      result.push(<FastFoodIngredient type={ingredient} />)
     }
   }
 
   return (
-    <div className={classes.FFPreview}>
+    <div className={classes.FastFoodPreview}>
       <div
         className={classes.ingredients}
         style={{ backgroundImage: `url(${ingredientsBackground})` }}>
@@ -21,4 +21,4 @@ const FFPreview = ({ ingredients }) => {
   );
 }
 
-export default FFPreview;
+export default FastFoodPreview;
