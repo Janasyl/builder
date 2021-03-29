@@ -6,7 +6,7 @@ import potatoBackground from "../../../images/french-fries.svg";
 
 const FastFoodIngredient = ({ type, fixed }) => {
   const types = {
-    salami: { backgroundImage: `url(${potatoBackground})`, width: "35px", height: "35px" },
+    potato: { backgroundImage: `url(${potatoBackground})`, width: "35px", height: "35px" },
  
   };
 
