@@ -1,47 +1,25 @@
-import React from "react";
+import FastFoodIngredient from "../FastFoodIngredient/FastFoodIngredient";
 
-import classes from "./FastFoodIngredient.module.css";
-import potatoBackground from "../../../images/french-fries.svg";
+import classes from "./FastFoodPreview.module.css";
+import ingredientsBackground from "../../../images/fast-food.svg";
 
-
-const FastFoodIngredient = ({ type, fixed }) => {
-  const types = {
-    potato: { backgroundImage: `url(${potatoBackground})`, width: "35px", height: "35px" },
- 
-  };
-
-  function getPosition(ingredientWidth) {
-    const pizzaDiameter = 380;
-    const pizzaRadius = pizzaDiameter / 2;
-    const ingredientRadius = parseInt(ingredientWidth) / 2;
-
-    const ingredientTop = Math.round(Math.random() * pizzaDiameter);
-    const ingredientLeft = Math.round(Math.random() * pizzaDiameter);
-
-    const distance = Math.sqrt(
-      Math.pow(ingredientTop - pizzaRadius, 2) + Math.pow(ingredientLeft - pizzaRadius, 2)
-    ) + ingredientRadius;
-
-    return distance < pizzaRadius
-      ? {
-        top: ingredientTop - ingredientRadius,
-        left: ingredientLeft - ingredientRadius
-      }
-      : getPosition(ingredientWidth);
+const FastFoodPreview = ({ ingredients }) => {
+  const result = [];
+  for (const ingredient in ingredients) {
+    for (let i = 0; i < ingredients[ingredient]; i++) {
+      result.push(<FastFoodIngredient key={ingredient + i} type={ingredient} />)
+    }
   }
-
-  // Get random position for this ingredient.
-  if (!fixed) {
-    const position = getPosition(types[type].width);
-    types[type].top = position.top + "px";
-    types[type].left = position.left + "px";
-  }
-  // Get random rotation for this ingredient.
-  types[type].transform = `rotate(${Math.round(Math.random() * 360)}deg)`;
 
   return (
-    <div className={classes.FastFoodIngredient} style={types[type]}></div>
+    <div className={classes.FastFoodPreview}>
+      <div
+        className={classes.ingredients}
+        style={{ backgroundImage: `url(${ingredientsBackground})` }}>
+        {result}
+      </div>
+    </div>
   );
 }
 
-export default React.memo(FastFoodIngredient);
+export default FastFoodPreview;
