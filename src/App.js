@@ -1,5 +1,5 @@
 import Layout from "./components/Layout/Layout";
-import FastFoodBuilder from "./components/FastFoodBuilder/FastFoodBuilder";
+import StreetFoodBuilder from "./components/StreetFoodBuilder/StreetFoodBuilder";
 
 import "./App.css";
 
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <Layout>
-        <FastFoodBuilder />
+        <StreetFoodBuilder />
       </Layout>
     </div>
   );
