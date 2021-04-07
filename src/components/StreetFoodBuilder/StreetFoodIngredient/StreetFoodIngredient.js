@@ -19,19 +19,18 @@ const StreetFoodIngredient = ({ type, fixed }) => {
   };
 
   function getPosition(ingredientWidth) {
-    const streetfoodDiameter = 380;
+    const pizzaDiameter = 380;
+    const pizzaRadius = pizzaDiameter / 2;
     const ingredientRadius = parseInt(ingredientWidth) / 2;
 
-    const ingredientTop = Math.round(Math.random() * streetfoodDiameter);
-    const ingredientLeft = Math.round(Math.random() * streetfoodDiameter);
+    const ingredientTop = Math.round(Math.random() * pizzaDiameter);
+    const ingredientLeft = Math.round(Math.random() * pizzaDiameter);
 
     const distance = Math.sqrt(
-      // eslint-disable-next-line no-undef
-      Math.pow(ingredientTop - streetfoodRadius, 2) + Math.pow(ingredientLeft - streetfoodRadius, 2)
+      Math.pow(ingredientTop - pizzaRadius, 2) + Math.pow(ingredientLeft - pizzaRadius, 2)
     ) + ingredientRadius;
 
-    // eslint-disable-next-line no-undef
-    return distance < streetfoodRadius
+    return distance < pizzaRadius
       ? {
         top: ingredientTop - ingredientRadius,
         left: ingredientLeft - ingredientRadius
@@ -47,11 +46,11 @@ const StreetFoodIngredient = ({ type, fixed }) => {
   }
   // Get random rotation for this ingredient.
   types[type].transform = `rotate(${Math.round(Math.random() * 360)}deg)`;
+  
 
   return (
-    <div className={classes.StreetFoodIngredient} style={types[type]}></div>
+    <div className={classes.PizzaIngredient} style={types[type]}></div>
   );
 }
 
-// eslint-disable-next-line no-undef
 export default React.memo(StreetFoodIngredient);

@@ -1,4 +1,4 @@
-import StreetFoodIngredient from "../StreetFoodFoodIngredient/StreetFoodIngredient";
+import StreetFoodIngredient from "../StreetFoodIngredient/StreetFoodIngredient";
 
 import classes from "./StreetFoodPreview.module.css";
 import ingredientsBackground from "../../../images/cheese.svg";
