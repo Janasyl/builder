@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from "./StreetFoodIngredient.module.css";
 import shawrmaBackground from "../../../images/kebab.svg";
-import burgerBackground from "../../../images/burger.svg";
+import tomatoBackground from "../../../images/tomato.svg";
 import blackOliveBackground from "../../../images/blackOlive.svg";
 import greenOliveBackground from "../../../images/greenOlive.svg";
 import redPepperBackground from "../../../images/redPepper.svg";
@@ -11,7 +11,7 @@ import yellowPepperBackground from "../../../images/yellowPepper.svg";
 const StreetFoodIngredient = ({ type, fixed }) => {
   const types = {
     salami: { backgroundImage: `url(${blackOliveBackground})`, width: "10px", height: "10px" },
-    burger: { backgroundImage: `url(${burgerBackground})`, width: "50px", height: "50px" },
+    tomato: { backgroundImage: `url(${tomatoBackground})`, width: "35px", height: "35px" },
     blackOlive: { backgroundImage: `url(${shawrmaBackground})`, width: "50px", height: "50px", rotate: "180deg" },
     greenOlive: { backgroundImage: `url(${greenOliveBackground})`, width: "10px", height: "10px"  },
     redPepper: { backgroundImage: `url(${redPepperBackground})`, width: "20px", height: "20px" },
