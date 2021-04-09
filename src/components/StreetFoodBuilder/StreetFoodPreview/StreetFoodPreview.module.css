@@ -9,21 +9,21 @@
   height: 400px;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  border-radius: 100%;
-  background-color: #fcc067;
+  border-radius: 20px;
+  background-color: #F8C046;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ingredients {
+.podnos {
+  background: rgb(255, 75, 75);
   width: 380px;
-  height: 380px;
-  border-radius: 100%;
+  width: 380px;
   position: relative;
 }
 .price {
-  background-color: tomato;
+  background-color: rgb(204, 12, 12);
   border-radius: 1rem;
   padding: 0 1rem;
   font-size: 1.5rem;

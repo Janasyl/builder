@@ -6,10 +6,9 @@ const StreetFoodControls = ({ ingredients, addIngredient, removeIngredient }) =>
   const results = [];
   let total = 0;
   for (const ingredient in ingredients) {
-    // Add ingredient number to totals number
+  
     total += ingredients[ingredient];
-    // Render pizza control for this ingredient
-    // eslint-disable-next-line react/jsx-no-undef
+
     results.push(<StreetFoodControl
         key={ingredient}
         add={addIngredient}

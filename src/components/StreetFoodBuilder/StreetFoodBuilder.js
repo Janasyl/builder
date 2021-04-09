@@ -8,12 +8,12 @@ import axios from "axios";
 
 const StreetFoodBuilder = () => {
   const prices = {
-    tomato: 3.5,
-    salami: 4,
-    greenOlive: .3,
-    blackOlive: .3,
-    redPepper: 2,
-    yellowPepper: 1,
+    burger: 150,
+    frenchfries: 200,
+    coffee: 30,
+    coke: 25,
+    shawrma: 130,
+    pepsi: 35,
   };
   const [ingredients, setIngredients] = useState({});
   const [price, setPrice] = useState(0);
