@@ -2,7 +2,9 @@ import classes from "./Nav.module.css";
 
 const Nav = () => {
   return (
-    <div className={classes.Nav}>Builder</div>
+    <div className={classes.Nav}>Builder Authenticate</div>
+
+    
   );
 }
 
