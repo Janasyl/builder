@@ -1,7 +1,7 @@
 import StreetFoodIngredient from "../StreetFoodIngredient/StreetFoodIngredient";
 
 import classes from "./StreetFoodPreview.module.css";
-
+// import ingredientsBackground from "../../../images/cheese.svg";
 
 const StreetFoodPreview = ({ ingredients, price }) => {
   const result = [];
@@ -13,9 +13,15 @@ const StreetFoodPreview = ({ ingredients, price }) => {
 
   return (
     <div className={classes.StreetFoodPreview}>
-      <div className={classes.streetfood}>
-        <div className={classes.podnos}>
-          
+      <div className={classes.food}>
+        <div
+          className={classes.ingredients}
+          style={{ 
+            backgroundColor: "yellow",
+            width: "350px",
+            height: "350px"
+           }}>
+          {result}
         </div>
       </div>
       <div className={classes.price}>{price.toFixed(1)} som</div>

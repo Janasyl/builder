@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./StreetFoodIngredient.module.css";
-import shawrmaBackground from "../../../images/kebab.svg";
+import salamiBackground from "../../../images/salami.svg";
 import tomatoBackground from "../../../images/tomato.svg";
 import blackOliveBackground from "../../../images/blackOlive.svg";
 import greenOliveBackground from "../../../images/greenOlive.svg";
@@ -10,27 +10,27 @@ import yellowPepperBackground from "../../../images/yellowPepper.svg";
 
 const StreetFoodIngredient = ({ type, fixed }) => {
   const types = {
-    salami: { backgroundImage: `url(${blackOliveBackground})`, width: "10px", height: "10px" },
-    tomato: { backgroundImage: `url(${tomatoBackground})`, width: "35px", height: "35px" },
-    blackOlive: { backgroundImage: `url(${shawrmaBackground})`, width: "50px", height: "50px", rotate: "180deg" },
-    greenOlive: { backgroundImage: `url(${greenOliveBackground})`, width: "10px", height: "10px"  },
+    salami: { backgroundImage: `url(${salamiBackground})`, width: "35px", height: "35px" },
+   tomato: { backgroundImage: `url(${tomatoBackground})`, width: "35px", height: "35px" },
+    blackOlive: { backgroundImage: `url(${blackOliveBackground})`, width: "10px", height: "10px" },
+    greenOlive: { backgroundImage: `url(${greenOliveBackground})`, width: "10px", height: "10px" },
     redPepper: { backgroundImage: `url(${redPepperBackground})`, width: "20px", height: "20px" },
     yellowPepper: { backgroundImage: `url(${yellowPepperBackground})`, width: "40px", height: "40px" },
   };
 
   function getPosition(ingredientWidth) {
-    const pizzaDiameter = 400;
-    const pizzaRadius = pizzaDiameter / 2;
+    const foodDiameter = 380;
+    const foodRadius = foodDiameter / 2;
     const ingredientRadius = parseInt(ingredientWidth) / 2;
 
-    const ingredientTop = Math.round(Math.random() * pizzaDiameter);
-    const ingredientLeft = Math.round(Math.random() * pizzaDiameter);
+    const ingredientTop = Math.round(Math.random() * foodDiameter);
+    const ingredientLeft = Math.round(Math.random() *foodDiameter);
 
     const distance = Math.sqrt(
-      Math.pow(ingredientTop - pizzaRadius, 2) + Math.pow(ingredientLeft - pizzaRadius, 2)
+      Math.pow(ingredientTop - foodRadius, 2) + Math.pow(ingredientLeft - foodRadius, 2)
     ) + ingredientRadius;
 
-    return distance < pizzaRadius
+    return distance < foodRadius
       ? {
         top: ingredientTop - ingredientRadius,
         left: ingredientLeft - ingredientRadius
@@ -46,10 +46,9 @@ const StreetFoodIngredient = ({ type, fixed }) => {
   }
   // Get random rotation for this ingredient.
   types[type].transform = `rotate(${Math.round(Math.random() * 360)}deg)`;
-  
 
   return (
-    <div className={classes.PizzaIngredient} style={types[type]}></div>
+    <div className={classes.StreetFoodngredient} style={types[type]}></div>
   );
 }
 
