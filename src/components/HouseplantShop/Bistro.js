@@ -1,6 +1,6 @@
-import HouseplantControls from "./HouseplantControls/HouseplantControls";
-import HouseplantPreview from "./HouseplantPreview/HouseplantPreview";
-import classes from "./HouseplantShop.module.css";
+import HouseplantControls from "./BistroControls/BistroControls";
+import HouseplantPreview from "./BistroPreview/BisstroPreview";
+import classes from "./Bitro.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react"
@@ -8,14 +8,11 @@ import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
 
-const HouseplantShop = ({history}) => {
+const Bistro = ({history}) => {
     const prices = {
-        alocasia: 150,
-        bonsai: 100,
-        begonia:140,
-        cyclamen:200,
-        calathea:100,
-        dracaena:80
+        Burger: 150,
+        Kebab: 100
+
     }
     const [price, setPrice] = useState(0);
     const [pots, setPots] = useState({});
@@ -38,7 +35,7 @@ const HouseplantShop = ({history}) => {
         }
     }
     function loadDefaults() {
-        axios.get('https://builder-b9129-default-rtdb.firebaseio.com/default.json')
+        axios.get('https://streetfood-a34bf-default-rtdb.firebaseio.com/default.json')
             .then((response) => {
                 setPrice(response.data.price);
                 setPots(response.data.pots);
@@ -51,7 +48,7 @@ const HouseplantShop = ({history}) => {
         setOrdering(false)
     }
     function finishOrdering() {
-        axios.post('https://builder-b9129-default-rtdb.firebaseio.com/default.json' ,{
+        axios.post('https://streetfood-a34bf-default-rtdb.firebaseio.com/default.json' ,{
             pots:pots,
             price:price,
             address:"fadfda",
@@ -65,8 +62,8 @@ const HouseplantShop = ({history}) => {
     }
     return (
         <div>
-            <h1 className={classes.H1}> Houseplant Shop </h1>
-            <div className={classes.HouseplantShop}>
+            <h1 className={classes.H1}> Bistro </h1>
+            <div className={classes.Bistro}>
                 <HouseplantPreview pots={pots} price={price} />
                 <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
                 <Modal show={ordering} cancel={stopOrdering}>
@@ -79,4 +76,4 @@ const HouseplantShop = ({history}) => {
     );
 }
 
-export default HouseplantShop;
+export default Bistro;

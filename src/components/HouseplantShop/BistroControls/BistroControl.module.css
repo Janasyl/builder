@@ -1,4 +1,4 @@
-.HouseplantControl{
+.BistroControl{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,16 +6,16 @@
     font-size: 1.3rem;
     margin-top: 5px;
 }
-.HouseplantControl div{
+.BistroControl div{
     background-size: cover;
     border-radius: 50%;
     box-shadow: 0 0 10px #eee ;
     margin: 15px;
     margin-top: 0;
 }
-.HouseplantControl div:hover{
+.BistroControl div:hover{
     transform: none;
 }
-.HouseplantControl div:hover{
+.BistroControl div:hover{
     background-color: #eee;
 }

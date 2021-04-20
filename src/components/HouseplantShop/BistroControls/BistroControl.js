@@ -1,11 +1,11 @@
-import classes from "../HouseplantControls/HouseplantControl.module.css";
-import HouseplantPotSize from "../HouseplantPotSize/HouseplantPotSize"
+import classes from "../BistroControls/BistroControl.module.css";
+import BistroMenuSize from "../BistroMenuSize/BistroMenuSize"
 import Button from "../../UI/Button/Button";
 import soundRemove from "../../../audio/plant-sound.mp3"
 // import soundAdd from "../../../audio/plant-sound-plus.mp3"
 
 
-const HouseplantControl = ({type , addPot , removePot , count}) => {
+const BistroControl = ({type , addPot , removePot , count}) => {
     function removeSound() {
         let audio = new Audio();
         audio.preload ='auto';
@@ -19,15 +19,15 @@ const HouseplantControl = ({type , addPot , removePot , count}) => {
     //     audio.play();
     // }
     return (
-    <div className={classes.HouseplantControl}>
+    <div className={classes.BistroControl}>
         <Button 
         className={classes.Button} 
         onClick={() => {addPot(type)}}>+</Button>
-         <HouseplantPotSize type={type} />
+         <BistroMenuSize type={type} />
         <Button 
         className={classes.Button} 
         onClick={() => {removePot(type) ; removeSound()}} disabled={!count}>-</Button>
     </div> );
 }
  
-export default HouseplantControl;
+export default BistroControl;

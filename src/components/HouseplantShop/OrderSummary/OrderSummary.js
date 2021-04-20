@@ -2,12 +2,8 @@ import classes from "./OrderSummary.module.css";
 
 const OrderSummary = ({pots , price}) => {
     const labels = {
-        alocasia: "alocasias",
-        bonsai: "bonsais",
-        begonia:"begonias",
-        cyclamen:"cyclamens",
-        calathea:"calatheas",
-        dracaena:"dracaenas"
+        burger: "Burger",
+        kebab: "Kebab"
     }
     const results =Object.keys(pots)
      .map(type => <li>{labels[type]} : {pots[type]}</li>)
