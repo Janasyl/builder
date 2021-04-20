@@ -1,12 +1,12 @@
 import classes from "./CheckoutSummary.module.css";
-import HouseplantPreview from "../../HouseplantShop/HouseplantPreview/HouseplantPreview";
+import BistroPreview from "../../HouseplantShop/BistroPreview/BistroPreview";
 import Button from "../../UI/Button/Button";
 
 const CheckoutSummary = ({ cancelCallback }) => {
   return (
     <div className={classes.CheckoutSummary}>
       <div>
-        <HouseplantPreview pots={{
+        <BistroPreview pots={{
           alocasia: 5, 
           bonsai: 1,
         }} price={150} />

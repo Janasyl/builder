@@ -1,5 +1,5 @@
 import Layout from "./components/Layout/Layout";
-import HouseplantShop from "./components/HouseplantShop/Bistro"
+import Bistro from "./components/HouseplantShop/Bistro"
 import  "./App.css";
 import Checkout from "./components/Checkout/Checkout";
 import { Redirect, Route, Switch } from "react-router";
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Layout>
         <Switch>
-          <Route path="/" component={HouseplantShop} exact />
+          <Route path="/" component={Bistro} exact />
           <Route path="/checkout" component={Checkout} />
           <Redirect to="/" />
         </Switch>
