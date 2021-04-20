@@ -1,0 +1,14 @@
+.HouseplantControls{
+    background-color: rgb(59, 163, 59);
+    width: 300px;
+    height: 550px;
+    padding: 1rem;
+    border-radius: 50px;
+    text-align: center;
+}
+@media(max-width:1020px){
+    .HouseplantControls{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

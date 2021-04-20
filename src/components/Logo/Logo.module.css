@@ -1,0 +1,13 @@
+.Logo{
+    display: flex;
+    align-items: center;
+}
+.Logo img{
+    height: 3rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+.Logo:hover{
+    transition: 1s;
+    color: rgb(8, 78, 61);
+}

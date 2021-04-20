@@ -1,0 +1,28 @@
+@keyframes potAnimation {
+    10%{
+        transform-origin: bottom;
+    }
+    50%{
+        transform: scale(.9);
+        transform-origin: bottom;
+    }
+    100%{
+        transform: scale(1);
+        transform-origin: bottom;
+    }
+}
+.HouseplantPot{
+    background-size: cover;
+    display: flex;
+
+    margin: 10px;
+    animation-name: potAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+
+}
+
+

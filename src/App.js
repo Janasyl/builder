@@ -1,16 +1,15 @@
 import Layout from "./components/Layout/Layout";
-import StreetFoodBuilder from "./components/StreetFoodBuilder/StreetFoodBuilder";
+import HouseplantShop from "./components/HouseplantShop/HouseplantShop"
+import  "./App.css";
 import Checkout from "./components/Checkout/Checkout";
-
-import "./App.css";
 import { Redirect, Route, Switch } from "react-router";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <Layout>
         <Switch>
-          <Route path="/" component={StreetFoodBuilder} exact />
+          <Route path="/" component={HouseplantShop} exact />
           <Route path="/checkout" component={Checkout} />
           <Redirect to="/" />
         </Switch>

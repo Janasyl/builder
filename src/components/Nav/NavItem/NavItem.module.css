@@ -1,22 +1,24 @@
 .NavItem a {
-  color: white;
-  border-bottom: 5px solid transparent;
-  text-decoration: none;
-  display: block;
-  padding: .5rem 1rem .35rem;
-}
-.NavItem a:hover {
-  border-color: white;
-  background-color: rgb(236, 47, 14);
-}
-.NavItem a:active,
-.NavItem a.active {
-  border-color: white;
-}
-
-@media (max-width: 549px) {
-  .NavItem a {
-    border-right: 10px solid transparent;
-    border-bottom: none;
+    color: green;
+    border-bottom: 5px solid transparent;
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1rem .35rem;
   }
+  .NavItem a:hover {
+    border-color: green;
+    background-color: rgb(245, 212, 106);
+  }
+  .NavItem a:active,
+  .NavItem a.active {
+    border-color: green;
+  }
+
+  
+  @media(max-width:549px){
+    .NavItem a{
+        border-left:2px solid white ;
+        border-bottom: none;
+
+    }
 }
