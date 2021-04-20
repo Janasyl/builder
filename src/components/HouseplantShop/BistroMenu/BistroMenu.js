@@ -1,4 +1,4 @@
-import classes from "./HouseplantPot.module.css"
+import classes from "./BistroMenu.module.css"
 
 import Burger from "../../../images/burger.svg"
 import Kebab from "../../../images/kebab.svg"
