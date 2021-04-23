@@ -1,5 +1,5 @@
 import Layout from "./components/Layout/Layout";
-import Bistro from "./components/HouseplantShop/Bistro"
+import Bistro from "./components/Bistro/Bistro"
 import  "./App.css";
 import Checkout from "./components/Checkout/Checkout";
 import { Redirect, Route, Switch } from "react-router";

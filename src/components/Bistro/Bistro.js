@@ -1,6 +1,6 @@
-import HouseplantControls from "./BistroControls/BistroControls";
-import HouseplantPreview from "./BistroPreview/BisstroPreview";
-import classes from "./Bitro.module.css";
+import BistroControls from "./BistroControls/BistroControls";
+import BistroPreview from "./BistroPreview/BistroPreview";
+import classes from "./BistroShop.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import React from "react"
@@ -63,9 +63,9 @@ const Bistro = ({history}) => {
     return (
         <div>
             <h1 className={classes.H1}> Bistro </h1>
-            <div className={classes.Bistro}>
-                <HouseplantPreview pots={pots} price={price} />
-                <HouseplantControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
+            <div className={classes.BistroShop}>
+                <BistroPreview pots={pots} price={price} />
+                <BistroControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
                 <Modal show={ordering} cancel={stopOrdering}>
                     <OrderSummary pots={pots} price={price} />
                     <Button onClick={finishOrdering} green>Checkout</Button>

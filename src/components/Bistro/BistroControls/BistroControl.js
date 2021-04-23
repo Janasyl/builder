@@ -12,12 +12,7 @@ const BistroControl = ({type , addPot , removePot , count}) => {
         audio.src = soundRemove;
         audio.play();
     }
-    // function addSound() {
-    //     let audio = new Audio();
-    //     audio.preload ='auto';
-    //     audio.src = soundAdd;
-    //     audio.play();
-    // }
+
     return (
     <div className={classes.BistroControl}>
         <Button 

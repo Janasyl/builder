@@ -1,4 +1,4 @@
-/* @keyframes potAnimation {
+@keyframes potAnimation {
     10%{
         transform-origin: bottom;
     }
@@ -10,7 +10,8 @@
         transform: scale(1);
         transform-origin: bottom;
     }
-} */
+}
+
 .BistroMenu{
     background-size: cover;
     display: flex;
