@@ -1,19 +1,19 @@
 import classes from "./BistroMenu.module.css"
 
-import alocasia from "../../../images/alocasia.svg"
-import begonia from "../../../images/begonia.svg"
-import bonsai from "../../../images/bonsai.svg"
-import calathea from "../../../images/calathea.svg"
-import cyclamen from "../../../images/cyclamen.svg"
-import dracaena from "../../../images/dracaena.svg"
+import burger from "../../../images/burger.svg"
+import coffee from "../../../images/coffee.svg"
+import cola from "../../../images/cola.svg"
+import kebab from "../../../images/kebab.svg"
+import potato from "../../../images/potato.svg"
+import waiter from "../../../images/waiter.svg"
 const BistroMenu =({type}) => {
     const types = {
-        alocasia : {backgroundImage : `url(${alocasia})` , width:"80px", height:"80px"},
-        begonia : {backgroundImage : `url(${begonia})` , width:"80px", height:"80px"},
-        bonsai : {backgroundImage : `url(${bonsai})` , width:"80px", height:"80px"},
-        calathea : {backgroundImage : `url(${calathea})` , width:"80px", height:"80px"},
-        cyclamen : {backgroundImage : `url(${cyclamen})` , width:"80px", height:"80px"},
-        dracaena : {backgroundImage : `url(${dracaena})` , width:"80px", height:"80px"}
+        burger : {backgroundImage : `url(${burger})` , width:"80px", height:"80px"},
+        coffee : {backgroundImage : `url(${coffee})` , width:"80px", height:"80px"},
+        cola : {backgroundImage : `url(${cola})` , width:"80px", height:"80px"},
+        kebab : {backgroundImage : `url(${kebab})` , width:"80px", height:"80px"},
+        potato : {backgroundImage : `url(${potato})` , width:"80px", height:"80px"},
+        waiter : {backgroundImage : `url(${waiter})` , width:"80px", height:"80px"}
     }
     return ( 
         <div className={classes.BistroMenu} style={types[type]}></div>
