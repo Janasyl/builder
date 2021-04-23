@@ -6,9 +6,9 @@
     left: 0;
 
     font-size: 1.7rem;
-    background:rgb(190, 189, 174);
-    color: green;
-    box-shadow:  0 0 10px rgba(0, 0, 0, .5);
+    background:#fcd12a;
+    color: rgb(0, 0, 0);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform .3s ease-out;
     z-index: 2;
 }

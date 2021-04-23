@@ -5,7 +5,7 @@
     width: 40%;
     padding: 1rem;
     background-color: rgb(243 , 219 , 3);
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,  0, .5);
     transition: transform .5s ease-out;
