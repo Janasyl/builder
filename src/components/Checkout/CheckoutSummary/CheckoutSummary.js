@@ -3,20 +3,21 @@ import BistroPreview from "../../Bistro/BistroPreview/BistroPreview";
 import Button from "../../UI/Button/Button";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 
-const CheckoutSummary = ({ cancelCallback }) => {
+const CheckoutSummary = ({ submitCallback, cancelCallback }) => {
   return (
     <div className={classes.CheckoutSummary}>
       <div>
-        <BistroPreview pots={{
-          Kebab: 5, 
-          Burger: 1,
+        <BistroPreview ingredients={{
+          tomato: 5, 
+          salami: 10,
+          greenOlive: 50,
         }} price={150} />
       </div>
-<CheckoutForm />
-
-
+      <CheckoutForm
+        submitCallback={submitCallback}
+        cancelCallback={cancelCallback} />
     </div>
   );
 }
-
-export default CheckoutSummary; 
+ 
+export default CheckoutSummary;
