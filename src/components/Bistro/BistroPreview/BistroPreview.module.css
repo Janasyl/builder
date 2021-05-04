@@ -12,7 +12,8 @@
   padding: 18px;
 }
 .price {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 124, 1);
+  border-radius: 5px;
   max-width: 250px;
   margin: 0 auto;
   text-align: center;

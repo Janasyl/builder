@@ -35,7 +35,7 @@ const Bistro = ({history}) => {
         }
     }
     function loadDefaults() {
-        axios.get('https://streetfood-a34bf-default-rtdb.firebaseio.com/default.json')
+        axios.get('https://builder-20211-default-rtdb.firebaseio.com/default.json')
             .then((response) => {
                 setPrice(response.data.price);
                 setPots(response.data.pots);
@@ -48,7 +48,7 @@ const Bistro = ({history}) => {
         setOrdering(false)
     }
     function finishOrdering() {
-        axios.post('https://streetfood-a34bf-default-rtdb.firebaseio.com/default.json' ,{
+        axios.post('https://streetfood-a34bf-default-rtdb.firebaseio.com/oreders.json' ,{
             pots:pots,
             price:price,
             address:"fadfda",
