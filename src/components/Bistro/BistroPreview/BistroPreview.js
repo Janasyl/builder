@@ -1,25 +1,21 @@
-import classes from "./BistroPreview.module.css";
-import BistroMenu from "../BistroMenu/BistroMenu"
+import BistroMenu from "../BistroMenu/BistroMenu";
 
-const BistroPreview = ({ pots, price }) => {
+import classes from "./BistroPreview.module.css";
+// import menuBackground from "../../../images/cheese.svg";
+
+const BistroPreview = ({ foods, price }) => {
   const result = [];
-  for (const pot in pots) {
-    for (let i = 0; i < pots[pot]; i++) {
-      result.push(<BistroMenu type={pot} />)
+  for (const food in foods) {
+    for (let i = 0; i < foods[food]; i++) {
+      result.push(<BistroMenu key={food + i} type={food} />);
     }
   }
+
   return (
-    <div>
     <div className={classes.BistroPreview}>
-        <div className={classes.pots}>
-          {result}
-        </div>
-    </div> 
-    <div> 
-        <div className={classes.price}>{price.toFixed(1)} som</div>
-    </div>
+      <div className={classes.price}>{price.toFixed(1)} som</div>
     </div>
   );
-}
+};
 
 export default BistroPreview;
