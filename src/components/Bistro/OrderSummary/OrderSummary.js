@@ -1,8 +1,8 @@
 import classes from "./OrderSummary.module.css";
 
-const OrderSummary = ({ ingredients, price,}) => {
-  const results = Object.keys(ingredients)
-    .map(type => <li>{type}: {ingredients[type]}</li>);
+const OrderSummary = ({ menu, price,}) => {
+  const results = Object.keys(menu)
+    .map(type => <li key={type}>{type}: {menu[type]}</li>);
 
   return (
     <div className={classes.OrderSummary}>
