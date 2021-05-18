@@ -1,79 +1,59 @@
-import BistroControls from "./BistroControls/BistroControls";
 import BistroPreview from "./BistroPreview/BistroPreview";
+import  BistroControls from "./BistroControls/BistroControls";
+
 import classes from "./BistroShop.module.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import React from "react"
+import { useEffect, useState } from "react";
+import axios from "../../axios";
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
+import { useDispatch, useSelector } from "react-redux";
+import withAxios from "../withAxios";
+import { load } from "../../store/actions/builder";
 
-const Bistro = ({history}) => {
-    const prices = {
-        Burger: 150,
-        Kebab: 100
+const Bistro = ({ history }) => {
+  const dispatch = useDispatch();
+  const ingredients = useSelector(state => state.builder.ingredients);
+  const price = useSelector(state => state.builder.price);
+  const [ordering, setOrdering] = useState(false);
 
-    }
-    const [price, setPrice] = useState(0);
-    const [pots, setPots] = useState({});
-    const [ordering , setOrdering] = useState(false)
-    useEffect(loadDefaults, []);
-    
-    function addPot(type) {
-        const newPots = { ...pots };
-        newPots[type]++;
-        setPots(newPots);
-        setPrice(price + prices[type]);
-    };
+  useEffect(() => dispatch(load()), [dispatch]);
 
-    function removePot(type) {
-        if (pots[type]) {
-            const newPots = { ...pots };
-            newPots[type]--;
-            setPots(newPots);
-            setPrice(price - prices[type]);
-        }
-    }
-    function loadDefaults() {
-        axios.get('https://builder-20211-default-rtdb.firebaseio.com/default.json')
-            .then((response) => {
-                setPrice(response.data.price);
-                setPots(response.data.pots);
-            });
-    }
-    function startOrdering() {
-        setOrdering(true)
-    }
-    function stopOrdering() {
-        setOrdering(false)
-    }
-    function finishOrdering() {
-        axios.post('https://streetfood-a34bf-default-rtdb.firebaseio.com/oreders.json' ,{
-            pots:pots,
-            price:price,
-            address:"fadfda",
-            phone:"0 777 777 777",
-            name:"Joah"
-        })
-        .then(()=> setOrdering(false));
-        setOrdering(false);
-        loadDefaults(false);
-        history.push('/checkout');
-    }
-    return (
-        <div>
-            <h1 className={classes.H1}> Bistro </h1>
-            <div className={classes.BistroShop}>
-                <BistroPreview pots={pots} price={price} />
-                <BistroControls pots={pots} addPot={addPot} removePot={removePot} startOrdering={startOrdering} />
-                <Modal show={ordering} cancel={stopOrdering}>
-                    <OrderSummary pots={pots} price={price} />
-                    <Button onClick={finishOrdering} green>Checkout</Button>
-                    <Button onClick={stopOrdering}>Cancel</Button>
-                </Modal>
-            </div>
-        </div>
-    );
+  function startOrdering() {
+    setOrdering(true);
+  }
+
+  function stopOrdering() {
+    setOrdering(false);
+  }
+
+  function finishOrdering() {
+    setOrdering(false);
+    // loadDefaults();
+    history.push('/checkout');
+  }
+
+  return (
+    <div className={classes.Bistro}>
+      <BistroPreview
+        ingredients={ingredients}
+        price={price} />
+      <BistroControls
+        ingredients={ingredients}
+        startOrdering={startOrdering}
+        />
+      <Modal
+        show={ordering}
+        cancel={stopOrdering}>
+          <OrderSummary
+            ingredients={ingredients}
+            price={price}
+            />
+          <Button onClick={finishOrdering} green="green">Checkout</Button>
+          <Button onClick={stopOrdering}>Cancel</Button>
+        </Modal>
+    </div>
+  );
 }
 
-export default Bistro;
+export default withAxios(Bistro, axios);
