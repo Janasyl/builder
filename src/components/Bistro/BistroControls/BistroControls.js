@@ -1,4 +1,4 @@
-import HouseplantControl from "./BistroControl";
+import BistroControl from "./BistroControl";
 import classes from "./BistroControls.module.css";
 import Button from "../../UI/Button/Button";
 
@@ -7,7 +7,7 @@ const BistroControls = ({ menus, startOrdering }) => {
   let total = 0;
   for (const menu in menus) {
     total += menus[menu];
-    results.push(<HouseplantControl type={menu} count={menus[menu]} key={menu} />);
+    results.push(<BistroControl type={menu} count={menus[menu]} key={menu} />);
   }
   return (
     <div className={classes.BistroControls}>
