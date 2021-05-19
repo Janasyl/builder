@@ -1,30 +1,22 @@
-import Button from "../../UI/Button/Button";
-import BistroControl from "./BistroControl/BistroControl";
+import HouseplantControl from "./BistroControl";
 import classes from "./BistroControls.module.css";
+import Button from "../../UI/Button/Button";
 
-const BistroControls = ({
-  foods,
-  startOrdering
-}) => {
+const BistroControls = ({ menus, startOrdering }) => {
   const results = [];
   let total = 0;
-  for (const food in foods) {
-    // Add ingredient number to totals number
-    total +=foods[food];
-    // Render pizza control for this ingredient
-    results.push(<BistroControl
-        key={food}
-        count={foods[food]}
-        type={food} />)
+  for (const menu in menus) {
+    total += menus[menu];
+    results.push(<HouseplantControl type={menu} count={menus[menu]} key={menu} />);
   }
-
   return (
     <div className={classes.BistroControls}>
-      <strong>Menu</strong>
       {results}
-      <Button disabled={!total} onClick={startOrdering}>Order</Button>
+      <Button disabled={!total} onClick={startOrdering}>
+        Order
+      </Button>
     </div>
   );
-}
+};
 
 export default BistroControls;
