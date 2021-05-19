@@ -1,7 +1,7 @@
 import BistroMenu from "../BistroMenu/BistroMenu";
 
 import classes from "./BistroPreview.module.css";
-// import menuBackground from "../../../images/cheese.svg";
+
 
 const BistroPreview = ({ foods, price }) => {
   const result = [];
