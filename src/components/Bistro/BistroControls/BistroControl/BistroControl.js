@@ -10,7 +10,7 @@ const BistroControl = ({ type, count }) => {
   return (
     <div className={classes.BistroControl}>
       <Button onClick={() => dispatch(add(type))}>+</Button>
-      <div className={classes.ingredient}>
+      <div className={classes.menu}>
         <BistroMenu type={type} fixed />
       </div>
       <Button onClick={() => dispatch(remove(type))} disabled={!count}>-</Button>

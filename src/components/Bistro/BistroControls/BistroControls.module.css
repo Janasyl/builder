@@ -1,14 +1,9 @@
-.BistroControls{
-    background-color: #fcd12a;
-    width: 300px;
-    height: 550px;
-    padding: 1rem;
-    border-radius: 50px;
-    text-align: center;
-}
-@media(max-width:1020px){
-    .BistroControls{
-        max-width: 80%;
-        margin: 0 auto;
-    }
+.BistroControls {
+  flex: 0 0 250px;
+  height: 400px;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #FF9000;
+  color: rgb(2, 0, 0);
+  text-align: center;
 }

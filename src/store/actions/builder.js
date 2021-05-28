@@ -1,18 +1,18 @@
 import axios from "../../axios";
-import { ADD_FOOD, REMOVE_FOOD, SET_FOODS } from "./types";
+import { ADD_MENU, REMOVE_MENU, SET_MENUS } from "./types";
 
-export const add = (food) => ({
-  type: ADD_FOOD,
-  food: food
+export const add = (menu) => ({
+  type: ADD_MENU,
+  menu: menu
 });
 
-export const remove = (food) => ({
-  type: REMOVE_FOOD,
-  food: food
+export const remove = (menu) => ({
+  type: REMOVE_MENU,
+  menu: menu
 });
 
 export const set = (data) => ({
-  type: SET_FOODS,
+  type: SET_MENUS,
   data: data
 });
 

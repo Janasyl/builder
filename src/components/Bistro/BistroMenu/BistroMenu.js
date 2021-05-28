@@ -1,37 +1,26 @@
+import React from "react";
+
 import classes from "./BistroMenu.module.css";
+import burgerBackground from "../../../images/burger.svg";
+import shawarmaBackground from "../../../images/kebab.svg";
+import frenchfriesBackground from "../../../images/potato.svg";
+import coffeeBackground from "../../../images/coffee.svg";
+import colaBackground from "../../../images/cola.svg";
 
-import burger from "../../../images/burger.svg";
-import coffee from "../../../images/coffee.svg";
-import cola from "../../../images/cola.svg";
-import kebab from "../../../images/kebab.svg";
-import potato from "../../../images/potato.svg";
-import waiter from "../../../images/waiter.svg";
-const BistroMenu = ({ type }) => {
+
+const BistroMenu = ({ type, fixed }) => {
   const types = {
-    burger: {
-      backgroundImage: `url(${burger})`,
-      width: "80px",
-      height: "80px",
-    },
-    coffee: {
-      backgroundImage: `url(${coffee})`,
-      width: "80px",
-      height: "80px",
-    },
-    cola: { backgroundImage: `url(${cola})`, width: "80px", height: "80px" },
-    kebab: { backgroundImage: `url(${kebab})`, width: "80px", height: "80px" },
-    potato: {
-      backgroundImage: `url(${potato})`,
-      width: "80px",
-      height: "80px",
-    },
-    waiter: {
-      backgroundImage: `url(${waiter})`,
-      width: "80px",
-      height: "80px",
-    },
+    burger: { backgroundImage: `url(${burgerBackground})`, width: "50px", height: "50px" },
+    shawarma: { backgroundImage: `url(${shawarmaBackground})`, width: "50px", height: "50px" },
+    frenchfries: { backgroundImage: `url(${frenchfriesBackground})`, width: "50px", height: "50px" },
+    coffee: { backgroundImage: `url(${coffeeBackground})`, width: "50px", height: "45px" },
+    cola: { backgroundImage: `url(${colaBackground})`, width: "50px", height: "50px" },
+    
   };
-  return <div className={classes.BistroMenu} style={types[type]}></div>;
-};
 
-export default BistroMenu;
+  return (
+    <div className={classes.BistroMenu} style={types[type]}></div>
+  );
+}
+
+export default React.memo(BistroMenu);

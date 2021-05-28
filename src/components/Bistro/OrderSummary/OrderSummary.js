@@ -1,17 +1,24 @@
 import classes from "./OrderSummary.module.css";
 
-const OrderSummary = ({ menu, price,}) => {
-  const results = Object.keys(menu)
-    .map(type => <li key={type}>{type}: {menu[type]}</li>);
+const OrderSummary = ({ menus, price }) => {
+  const labels = {
+    burger: "Burger",
+    shawarma: "Shawarma",
+    frenchfries: "French Fries",
+    coffee: "Coffee",
+    cola: "Cola",
+  
+  }
+  const results = Object.keys(menus)
+    .map(type => <li key={type}>{labels[type]}: {menus[type]}</li>);
 
   return (
     <div className={classes.OrderSummary}>
+      <h3>Order summary</h3>
       <ul>
         {results}
       </ul>
       <strong>Total price: {price.toFixed(1)} som</strong>
-      <div className={classes.div}>
-     </div>
     </div>
   );
 }

@@ -1,21 +1,10 @@
-.BistroControl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin-top: 5px;
+.BistroControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem 0;
 }
-.BistroControl div{
-    background-size: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgb(0, 0, 0) ;
-    margin: 15px;
-    margin-top: 0;
-}
-.BistroControl div:hover{
-    transform: none;
-}
-.BistroControl div:hover{
-    background-color: #eee;
+.BistroControl .menu div {
+  position: static;
+  margin: 0 .5rem;
 }

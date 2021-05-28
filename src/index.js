@@ -10,10 +10,11 @@ import {
 import thunk from 'redux-thunk';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import builder from './store/reducer/builder';
-import orders from './store/reducer/orders';
+import builder from './store/reducers/builder';
+import orders from './store/reducers/orders';
+import auth from './store/reducers/auth';
 
-const rootReducer = combineReducers({ builder, orders });
+const rootReducer = combineReducers({ builder, orders, auth });
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
