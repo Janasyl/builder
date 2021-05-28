@@ -6,6 +6,7 @@
   padding: .5rem 1rem .35rem;
 }
 .NavItem a:hover {
+  margin: 0;
   border-color: white;
   background-color: rgb(236, 47, 14);
 }

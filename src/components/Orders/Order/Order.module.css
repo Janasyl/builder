@@ -1,13 +1,12 @@
-.Order {
+.Order{
+     color: rgb(255, 188, 5);
+     margin: 2rem;
+     padding: 1rem;
+     width: 15rem;
      font-size: 20px;
-     display: flex;
-     align-items: center;
-     width: 500px;
-     height: 150px;
-     text-align: center;
-     color: white;
-     background: rgb(247, 132, 0);
      border-radius: 10px;
-     margin-left: 450px;
-     margin-top: 10px;
-}
+     box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+   }
+   /* .strong{
+     color: green;
+   } */
