@@ -1,13 +1,10 @@
 
-* {
-  box-sizing: border-box;
-  font-family: 'Lobster';
-}
 
+* {
+  font-family: 'Cookie', cursive;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-weight: 600;
-  
-  background: linear-gradient(to right, #f12711, #f5af19) ;
-  
+  background: #972402;
 }
